@@ -18,7 +18,7 @@ extension GameViewController {
         marker.icon     = GMSMarker.markerImage(with: color)
         marker.position = position
         marker.title    = title
-        marker.snippet  = "lat: " + String(format: "%.3f", position.latitude) + " long: " + String(format: "%.3f", position.longitude)
+        marker.snippet  = "lat: \(String(format: "%.3f", position.latitude)) \n long: \(String(format: "%.3f", position.longitude))"
         marker.map = mapView
     }
     

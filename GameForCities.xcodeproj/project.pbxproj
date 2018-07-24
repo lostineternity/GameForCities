@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1DAB942104C1F8004404E5 /* mapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A1DAB932104C1F8004404E5 /* mapStyle.json */; };
+		1A1DAB972104D72B004404E5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DAB962104D72B004404E5 /* Extension.swift */; };
+		1A1DAB992104F0E7004404E5 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DAB982104F0E7004404E5 /* StartPageViewController.swift */; };
 		1A376F7420FD0E5100514EF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A376F7320FD0E5100514EF0 /* AppDelegate.swift */; };
-		1A376F7620FD0E5100514EF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A376F7520FD0E5100514EF0 /* ViewController.swift */; };
+		1A376F7620FD0E5100514EF0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A376F7520FD0E5100514EF0 /* GameViewController.swift */; };
 		1A376F7920FD0E5100514EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A376F7720FD0E5100514EF0 /* Main.storyboard */; };
 		1A376F7B20FD0E5200514EF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A376F7A20FD0E5200514EF0 /* Assets.xcassets */; };
 		1A376F7E20FD0E5200514EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A376F7C20FD0E5200514EF0 /* LaunchScreen.storyboard */; };
-		1A376F8920FD0E5200514EF0 /* GameForCitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A376F8820FD0E5200514EF0 /* GameForCitiesTests.swift */; };
-		1A376F9420FD0E5200514EF0 /* GameForCitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A376F9320FD0E5200514EF0 /* GameForCitiesUITests.swift */; };
+		1A376FA220FD16B800514EF0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A376FA120FD16B700514EF0 /* Podfile */; };
+		1A47B6492101260B006A2F71 /* capitalCities.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A47B6482101260B006A2F71 /* capitalCities.json */; };
+		1AF7DB8020FE8A0900E389FA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7DB7F20FE8A0900E389FA /* Game.swift */; };
+		1AF7DB8220FE8A4D00E389FA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7DB8120FE8A4D00E389FA /* Repository.swift */; };
+		1AF7DB8B20FE91DE00E389FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7DB8A20FE91DE00E389FA /* Constants.swift */; };
+		A407FAAF7ADAA83AFD4EE2CB /* libPods-GameForCities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 052609253D92530FA40657AA /* libPods-GameForCities.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +41,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052609253D92530FA40657AA /* libPods-GameForCities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameForCities.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D225B774795EA75953AFC71 /* Pods-GameForCities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameForCities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameForCities/Pods-GameForCities.debug.xcconfig"; sourceTree = "<group>"; };
+		1A1DAB932104C1F8004404E5 /* mapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapStyle.json; sourceTree = "<group>"; };
+		1A1DAB962104D72B004404E5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		1A1DAB982104F0E7004404E5 /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 		1A376F7020FD0E5100514EF0 /* GameForCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameForCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A376F7320FD0E5100514EF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A376F7520FD0E5100514EF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A376F7520FD0E5100514EF0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		1A376F7820FD0E5100514EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A376F7A20FD0E5200514EF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A376F7D20FD0E5200514EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A376F7F20FD0E5200514EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A376F8420FD0E5200514EF0 /* GameForCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameForCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A376F8820FD0E5200514EF0 /* GameForCitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameForCitiesTests.swift; sourceTree = "<group>"; };
-		1A376F8A20FD0E5200514EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A376F8F20FD0E5200514EF0 /* GameForCitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameForCitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A376F9320FD0E5200514EF0 /* GameForCitiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameForCitiesUITests.swift; sourceTree = "<group>"; };
-		1A376F9520FD0E5200514EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A376FA120FD16B700514EF0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = GameForCities/Support/Podfile; sourceTree = SOURCE_ROOT; };
+		1A47B6482101260B006A2F71 /* capitalCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capitalCities.json; sourceTree = "<group>"; };
+		1AF7DB7F20FE8A0900E389FA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1AF7DB8120FE8A4D00E389FA /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		1AF7DB8A20FE91DE00E389FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4B90A8DD79E0B217E4514ABF /* Pods-GameForCities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameForCities.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameForCities/Pods-GameForCities.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A407FAAF7ADAA83AFD4EE2CB /* libPods-GameForCities.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +89,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1DAB952104D719004404E5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1A1DAB962104D72B004404E5 /* Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		1A376F6720FD0E5100514EF0 = {
 			isa = PBXGroup;
 			children = (
 				1A376F7220FD0E5100514EF0 /* GameForCities */,
-				1A376F8720FD0E5200514EF0 /* GameForCitiesTests */,
-				1A376F9220FD0E5200514EF0 /* GameForCitiesUITests */,
 				1A376F7120FD0E5100514EF0 /* Products */,
+				919EF7F0A7E61D0BA6FEAC4A /* Pods */,
+				7F0B85770BA0D96ADC431D99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,32 +120,87 @@
 		1A376F7220FD0E5100514EF0 /* GameForCities */ = {
 			isa = PBXGroup;
 			children = (
-				1A376F7320FD0E5100514EF0 /* AppDelegate.swift */,
-				1A376F7520FD0E5100514EF0 /* ViewController.swift */,
-				1A376F7720FD0E5100514EF0 /* Main.storyboard */,
-				1A376F7A20FD0E5200514EF0 /* Assets.xcassets */,
-				1A376F7C20FD0E5200514EF0 /* LaunchScreen.storyboard */,
-				1A376F7F20FD0E5200514EF0 /* Info.plist */,
+				1A1DAB952104D719004404E5 /* Helper */,
+				1AF7DB8720FE919900E389FA /* Constants */,
+				1AF7DB7E20FE89EE00E389FA /* Model */,
+				1AF7DB8620FE8ABF00E389FA /* Controller */,
+				1AF7DB8420FE8A8400E389FA /* View */,
+				1AF7DB8520FE8AA200E389FA /* Support */,
+				1AF7DB8320FE8A6900E389FA /* Resources */,
 			);
 			path = GameForCities;
 			sourceTree = "<group>";
 		};
-		1A376F8720FD0E5200514EF0 /* GameForCitiesTests */ = {
+		1AF7DB7E20FE89EE00E389FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1A376F8820FD0E5200514EF0 /* GameForCitiesTests.swift */,
-				1A376F8A20FD0E5200514EF0 /* Info.plist */,
+				1AF7DB7F20FE8A0900E389FA /* Game.swift */,
+				1AF7DB8120FE8A4D00E389FA /* Repository.swift */,
 			);
-			path = GameForCitiesTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		1A376F9220FD0E5200514EF0 /* GameForCitiesUITests */ = {
+		1AF7DB8320FE8A6900E389FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1A376F9320FD0E5200514EF0 /* GameForCitiesUITests.swift */,
-				1A376F9520FD0E5200514EF0 /* Info.plist */,
+				1A47B6482101260B006A2F71 /* capitalCities.json */,
+				1A1DAB932104C1F8004404E5 /* mapStyle.json */,
+				1A376F7A20FD0E5200514EF0 /* Assets.xcassets */,
 			);
-			path = GameForCitiesUITests;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AF7DB8420FE8A8400E389FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A376F7C20FD0E5200514EF0 /* LaunchScreen.storyboard */,
+				1A376F7720FD0E5100514EF0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1AF7DB8520FE8AA200E389FA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1A376F7320FD0E5100514EF0 /* AppDelegate.swift */,
+				1A376F7F20FD0E5200514EF0 /* Info.plist */,
+				1A376FA120FD16B700514EF0 /* Podfile */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1AF7DB8620FE8ABF00E389FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A376F7520FD0E5100514EF0 /* GameViewController.swift */,
+				1A1DAB982104F0E7004404E5 /* StartPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1AF7DB8720FE919900E389FA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1AF7DB8A20FE91DE00E389FA /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		7F0B85770BA0D96ADC431D99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				052609253D92530FA40657AA /* libPods-GameForCities.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		919EF7F0A7E61D0BA6FEAC4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D225B774795EA75953AFC71 /* Pods-GameForCities.debug.xcconfig */,
+				4B90A8DD79E0B217E4514ABF /* Pods-GameForCities.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A376F9820FD0E5200514EF0 /* Build configuration list for PBXNativeTarget "GameForCities" */;
 			buildPhases = (
+				F872EBAB5E43B4D0C8DE115D /* [CP] Check Pods Manifest.lock */,
 				1A376F6C20FD0E5100514EF0 /* Sources */,
 				1A376F6D20FD0E5100514EF0 /* Frameworks */,
 				1A376F6E20FD0E5100514EF0 /* Resources */,
+				25A660C2239F15F6E4354C23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,9 +309,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1DAB942104C1F8004404E5 /* mapStyle.json in Resources */,
 				1A376F7E20FD0E5200514EF0 /* LaunchScreen.storyboard in Resources */,
 				1A376F7B20FD0E5200514EF0 /* Assets.xcassets in Resources */,
+				1A376FA220FD16B800514EF0 /* Podfile in Resources */,
 				1A376F7920FD0E5100514EF0 /* Main.storyboard in Resources */,
+				1A47B6492101260B006A2F71 /* capitalCities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +334,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25A660C2239F15F6E4354C23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GameForCities/Pods-GameForCities-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameForCities/Pods-GameForCities-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F872EBAB5E43B4D0C8DE115D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameForCities-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A376F6C20FD0E5100514EF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A376F7620FD0E5100514EF0 /* ViewController.swift in Sources */,
+				1AF7DB8B20FE91DE00E389FA /* Constants.swift in Sources */,
+				1A376F7620FD0E5100514EF0 /* GameViewController.swift in Sources */,
+				1AF7DB8020FE8A0900E389FA /* Game.swift in Sources */,
+				1A1DAB972104D72B004404E5 /* Extension.swift in Sources */,
 				1A376F7420FD0E5100514EF0 /* AppDelegate.swift in Sources */,
+				1AF7DB8220FE8A4D00E389FA /* Repository.swift in Sources */,
+				1A1DAB992104F0E7004404E5 /* StartPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +394,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A376F8920FD0E5200514EF0 /* GameForCitiesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +401,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A376F9420FD0E5200514EF0 /* GameForCitiesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +555,12 @@
 		};
 		1A376F9920FD0E5200514EF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D225B774795EA75953AFC71 /* Pods-GameForCities.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L73658N795;
-				INFOPLIST_FILE = GameForCities/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GameForCities/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,11 +574,12 @@
 		};
 		1A376F9A20FD0E5200514EF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B90A8DD79E0B217E4514ABF /* Pods-GameForCities.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L73658N795;
-				INFOPLIST_FILE = GameForCities/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GameForCities/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

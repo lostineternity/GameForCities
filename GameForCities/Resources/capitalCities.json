@@ -1,0 +1,54 @@
+{
+    "capitalCities": [
+        {
+            "capitalCity": "Zurich",
+            "lat": "47.3686498",
+            "long": "8.5391825"
+        },
+        {
+            "capitalCity": "Paris",
+            "lat": "48.856614",
+            "long": "2.3522219"
+        },
+        {
+            "capitalCity": "Madrid",
+            "lat": "40.4381311",
+            "long": "-3.8196214"
+        },
+        {
+            "capitalCity": "London",
+            "lat": "51.5287718",
+            "long": "-0.2416819"
+        },
+        {
+            "capitalCity": "Berlin",
+            "lat": "52.5069312",
+            "long": "13.1445513"
+        },
+        {
+            "capitalCity": "Amsterdam",
+            "lat": "52.354775",
+            "long": "4.75854"
+        },
+        {
+            "capitalCity": "Rome",
+            "lat": "41.9102415",
+            "long": "12.3959133"
+        },
+        {
+            "capitalCity": "Oslo",
+            "lat": "59.8939529",
+            "long": "10.6450346"
+        },
+        {
+            "capitalCity": "Vienna",
+            "lat": "48.2208286",
+            "long": "16.2399762"
+        },
+        {
+            "capitalCity": "Zurich",
+            "lat": "47.3775499",
+            "long": "8.4666751"
+        }
+    ]
+}

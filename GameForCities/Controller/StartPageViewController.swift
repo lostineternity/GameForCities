@@ -10,7 +10,7 @@ import UIKit
 
 class StartPageViewController: UIViewController {
 
-    @IBAction func startNewGameButton(_ sender: Any) {
+    @IBAction private func startNewGameButton(_ sender: Any) {
        Game.shared.startNewGame()
     }
     

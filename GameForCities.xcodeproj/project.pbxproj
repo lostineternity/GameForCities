@@ -17,6 +17,7 @@
 		1A376F7E20FD0E5200514EF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A376F7C20FD0E5200514EF0 /* LaunchScreen.storyboard */; };
 		1A376FA220FD16B800514EF0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1A376FA120FD16B700514EF0 /* Podfile */; };
 		1A47B6492101260B006A2F71 /* capitalCities.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A47B6482101260B006A2F71 /* capitalCities.json */; };
+		1A75DB762107A3C1003C7BAA /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75DB752107A3C0003C7BAA /* Questions.swift */; };
 		1AF7DB8020FE8A0900E389FA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7DB7F20FE8A0900E389FA /* Game.swift */; };
 		1AF7DB8220FE8A4D00E389FA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7DB8120FE8A4D00E389FA /* Repository.swift */; };
 		1AF7DB8B20FE91DE00E389FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7DB8A20FE91DE00E389FA /* Constants.swift */; };
@@ -57,6 +58,7 @@
 		1A376F8F20FD0E5200514EF0 /* GameForCitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameForCitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A376FA120FD16B700514EF0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = GameForCities/Support/Podfile; sourceTree = SOURCE_ROOT; };
 		1A47B6482101260B006A2F71 /* capitalCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capitalCities.json; sourceTree = "<group>"; };
+		1A75DB752107A3C0003C7BAA /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		1AF7DB7F20FE8A0900E389FA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		1AF7DB8120FE8A4D00E389FA /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		1AF7DB8A20FE91DE00E389FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				1AF7DB7F20FE8A0900E389FA /* Game.swift */,
+				1A75DB752107A3C0003C7BAA /* Questions.swift */,
 				1AF7DB8120FE8A4D00E389FA /* Repository.swift */,
 			);
 			path = Model;
@@ -385,6 +388,7 @@
 				1AF7DB8020FE8A0900E389FA /* Game.swift in Sources */,
 				1A1DAB972104D72B004404E5 /* Extension.swift in Sources */,
 				1A376F7420FD0E5100514EF0 /* AppDelegate.swift in Sources */,
+				1A75DB762107A3C1003C7BAA /* Questions.swift in Sources */,
 				1AF7DB8220FE8A4D00E389FA /* Repository.swift in Sources */,
 				1A1DAB992104F0E7004404E5 /* StartPageViewController.swift in Sources */,
 			);

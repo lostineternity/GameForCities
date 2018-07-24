@@ -6,8 +6,6 @@
 //  Copyright © 2018 Sokol Vadym. All rights reserved.
 //
 
-import Foundation
-
 let defaultGameDistance = 1500 // kilometers
 let rightAnswerRadius: Double = 50000 // meters
 

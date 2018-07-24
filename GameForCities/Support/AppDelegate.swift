@@ -19,10 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyAvTEmHWPsAy5mS3Yb177i-FugWhowY29s")
         
-        let game = Game.shared
-        _ = Repositorium.shared
-        
-        game.fetchQuestionsFromRepositorium()
+        _ = Repository.shared
         
         return true
     }

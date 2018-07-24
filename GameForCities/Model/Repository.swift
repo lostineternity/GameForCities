@@ -8,14 +8,14 @@
 
 import Foundation
 
-class Repositorium {
+class Repository {
     
-    static var shared = Repositorium()
+    static var shared = Repository()
 
     var pathToFileWithQuestions: String!
     var jsonDataQuestions: Data!
     
-    init () {
+    private init () {
         pathToFileWithQuestions = Bundle.main.path(forResource: "capitalCities", ofType: "json")
         jsonDataQuestions = try? Data(contentsOf: URL(fileURLWithPath: pathToFileWithQuestions!), options: Data.ReadingOptions.dataReadingMapped)
     }

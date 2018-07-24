@@ -6,82 +6,86 @@
 //  Copyright © 2018 Sokol Vadym. All rights reserved.
 //
 
-import Foundation
 import GoogleMaps
-
-struct Questions: Codable {
-    var capitalCities: [Question]
-}
-struct Question: Codable {
-    var capitalCity: String
-    var lat: String
-    var long: String
-}
 
 class Game {
     
     static let shared = Game()
     
-    var repositorium = Repositorium.shared
+    var delegate: GameViewController?
+    
+    var repositorium = Repository.shared
     var distanceLeft = defaultGameDistance
-    var currentQuestion: Question!
-    var currentQuestionPosition: CLLocationCoordinate2D!
+    
+    var questions: Questions! = nil
+    var currentQuestion: Question? {
+        guard !isQuestionsListEnd else { return nil }
+        return questions.capitalCities[numberOfQuestion]
+    }
+    var currentQuestionPosition: CLLocationCoordinate2D? {
+        guard let question = currentQuestion else { return nil }
+        return CLLocationCoordinate2D(latitude: Double(question.lat)!, longitude: Double(question.long)!)
+    }
+    
     var answerReceived = false
     var numberOfQuestion = 0
     var citiesPlaced = 0
-    var questions: Questions!
-    var isQuestionsListEnd = false
-    var isGameOver = false
-    
-    func fetchQuestionsFromRepositorium(){
-        questions = repositorium.parseJsonData()
-        currentQuestion = questions.capitalCities[numberOfQuestion]
-        currentQuestionPosition = CLLocationCoordinate2D(latitude: Double(currentQuestion.lat)!, longitude: Double(currentQuestion.long)!)
+
+    var isQuestionsListEnd = false {
+        didSet {
+            if isQuestionsListEnd { delegate?.didFinishGame() }
+        }
+    }
+    var isGameOver = false {
+        didSet {
+            if isGameOver { delegate?.didFinishGame() }
+        }
     }
     
-    func getNextQuestion(){
+    private init() {
+        fetchQuestionsFromRepository()
+    }
+    
+    func fetchQuestionsFromRepository() {
+        questions = repositorium.parseJsonData()
+    }
+    
+    func NextQuestion() {
+        guard !(isGameOver || isQuestionsListEnd) else { return }
         numberOfQuestion += 1
-        if questions.capitalCities.endIndex > numberOfQuestion {
-            currentQuestion = questions.capitalCities[numberOfQuestion]
-            currentQuestionPosition = CLLocationCoordinate2D(latitude: Double(currentQuestion.lat)!, longitude: Double(currentQuestion.long)!)
-        }
-        else {
-            currentQuestion = nil
-            currentQuestion = nil
+        if questions.capitalCities.endIndex <= numberOfQuestion {
             isQuestionsListEnd = true
         }
         answerReceived = false
     }
     
-    func countResult(answerPosition: CLLocationCoordinate2D, rightPosition: CLLocationCoordinate2D){
+    func update(answerPosition: CLLocationCoordinate2D, rightPosition: CLLocationCoordinate2D) {
         answerReceived = true
         let coordinateAnswer = CLLocation(latitude: answerPosition.latitude, longitude: answerPosition.longitude)
         let coordinateRightPosition = CLLocation(latitude: rightPosition.latitude, longitude: rightPosition.longitude)
         let distanceInMeters = coordinateAnswer.distance(from: coordinateRightPosition)
-        if distanceInMeters > rightAnswerRadius {
-            let countedDistance = distanceLeft - Int(distanceInMeters)/1000
-            if countedDistance < 0 {
-                distanceLeft = 0
-                isGameOver = true
-            }
-            else {
-                distanceLeft = countedDistance
-            }
+        
+        guard distanceInMeters > rightAnswerRadius else {
+            citiesPlaced += 1
+            return
+        }
+        let countedDistance = distanceLeft - Int(distanceInMeters)/1000
+        if countedDistance < 0 {
+            distanceLeft = 0
+            isGameOver = true
         }
         else {
-            citiesPlaced += 1
+            distanceLeft = countedDistance
         }
     }
     
-    func startNewGame(){
+    func startNewGame() {
         Game.shared.dispose()
-        fetchQuestionsFromRepositorium()
+        fetchQuestionsFromRepository()
     }
     
-    private func dispose(){
+    private func dispose() {
         distanceLeft = defaultGameDistance
-        currentQuestion = nil
-        currentQuestionPosition = nil
         answerReceived = false
         numberOfQuestion = 0
         citiesPlaced = 0

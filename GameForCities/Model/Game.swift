@@ -17,10 +17,10 @@ class Game {
     var repositorium = Repository.shared
     var distanceLeft = defaultGameDistance
     
-    var questions: Questions! = nil
+    var questions: Questions?
     var currentQuestion: Question? {
-        guard !isQuestionsListEnd else { return nil }
-        return questions.capitalCities[numberOfQuestion]
+        guard !isQuestionsListEnd, let array = questions else { return nil }
+        return array.capitalCities[numberOfQuestion]
     }
     var currentQuestionPosition: CLLocationCoordinate2D? {
         guard let question = currentQuestion else { return nil }
@@ -51,9 +51,9 @@ class Game {
     }
     
     func NextQuestion() {
-        guard !(isGameOver || isQuestionsListEnd) else { return }
+        guard !(isGameOver || isQuestionsListEnd), let array = questions else { return }
         numberOfQuestion += 1
-        if questions.capitalCities.endIndex <= numberOfQuestion {
+        if array.capitalCities.endIndex <= numberOfQuestion {
             isQuestionsListEnd = true
         }
         answerReceived = false

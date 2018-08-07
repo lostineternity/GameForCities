@@ -51,5 +51,10 @@ extension GameViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         currentCursorCoordinate = coordinate
+        if let selectedPosition = currentCursorCoordinate {
+            mapView.clear()
+            placeMarker(title: "Your answer", color: .red, position: selectedPosition)
+            update()
+        }
     }
 }

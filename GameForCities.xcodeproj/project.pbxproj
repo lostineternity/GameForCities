@@ -56,7 +56,7 @@
 		1A376F7F20FD0E5200514EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A376F8420FD0E5200514EF0 /* GameForCitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameForCitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A376F8F20FD0E5200514EF0 /* GameForCitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameForCitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A376FA120FD16B700514EF0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = GameForCities/Support/Podfile; sourceTree = SOURCE_ROOT; };
+		1A376FA120FD16B700514EF0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		1A47B6482101260B006A2F71 /* capitalCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capitalCities.json; sourceTree = "<group>"; };
 		1A75DB752107A3C0003C7BAA /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		1AF7DB7F20FE8A0900E389FA /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				1A376F7220FD0E5100514EF0 /* GameForCities */,
+				1A376FA120FD16B700514EF0 /* Podfile */,
 				1A376F7120FD0E5100514EF0 /* Products */,
 				919EF7F0A7E61D0BA6FEAC4A /* Pods */,
 				7F0B85770BA0D96ADC431D99 /* Frameworks */,
@@ -167,7 +168,6 @@
 			children = (
 				1A376F7320FD0E5100514EF0 /* AppDelegate.swift */,
 				1A376F7F20FD0E5200514EF0 /* Info.plist */,
-				1A376FA120FD16B700514EF0 /* Podfile */,
 			);
 			path = Support;
 			sourceTree = "<group>";

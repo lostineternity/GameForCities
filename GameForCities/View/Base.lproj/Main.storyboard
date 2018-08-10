@@ -1,113 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F0D-f0-xbD">
-    <device id="retina5_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="4PQ-F0-fpW">
-            <objects>
-                <navigationController id="F0D-f0-xbD" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3VY-8c-UBv">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="MXU-Ex-feQ" kind="relationship" relationship="rootViewController" id="ooa-34-oNh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5K7-ec-m0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1028" y="107"/>
-        </scene>
-        <!--Start Page View Controller-->
-        <scene sceneID="dkp-0z-WiQ">
-            <objects>
-                <viewController id="MXU-Ex-feQ" customClass="StartPageViewController" customModule="GameForCities" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mdQ-bE-vBG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapGame-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Tc-zI-sl3">
-                                <rect key="frame" x="13" y="198" width="349" height="349"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="3Tc-zI-sl3" secondAttribute="height" multiplier="1:1" id="4mH-n7-AjF"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dG-If-F7F">
-                                <rect key="frame" x="99" y="135" width="177" height="42"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="2" height="2"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4b-ox-HzK">
-                                <rect key="frame" x="102.66666666666669" y="591" width="170" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="UEg-Ep-qTr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="bgR-3m-UEH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Start new game">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.BorderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startNewGameButton:" destination="MXU-Ex-feQ" eventType="touchUpInside" id="VW7-TR-6Ht"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="whd-An-cwb"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.67296225880000005" green="0.86695599769999998" blue="0.94964378240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="dPS-aW-19X" firstAttribute="trailing" secondItem="3Tc-zI-sl3" secondAttribute="trailing" constant="13" id="AMr-M8-vbQ"/>
-                            <constraint firstItem="i4b-ox-HzK" firstAttribute="top" secondItem="3Tc-zI-sl3" secondAttribute="bottom" constant="44" id="H4m-Ls-Owx"/>
-                            <constraint firstItem="3Tc-zI-sl3" firstAttribute="top" secondItem="6dG-If-F7F" secondAttribute="bottom" constant="21" id="IwH-Tn-qp3"/>
-                            <constraint firstItem="3Tc-zI-sl3" firstAttribute="leading" secondItem="dPS-aW-19X" secondAttribute="leading" constant="13" id="XQZ-Ri-kBJ"/>
-                            <constraint firstItem="6dG-If-F7F" firstAttribute="centerX" secondItem="mdQ-bE-vBG" secondAttribute="centerX" id="nUS-ai-UbE"/>
-                            <constraint firstItem="6dG-If-F7F" firstAttribute="top" secondItem="dPS-aW-19X" secondAttribute="top" constant="47" id="obI-ds-bPZ"/>
-                            <constraint firstItem="i4b-ox-HzK" firstAttribute="centerX" secondItem="mdQ-bE-vBG" secondAttribute="centerX" id="xBC-vi-tWH"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="dPS-aW-19X"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="PNE-La-ooJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bSG-t1-Vec" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-255.19999999999999" y="106.59670164917542"/>
-        </scene>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="GameForCities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LS1-vh-QSx" customClass="GMSMapView">
-                                <rect key="frame" x="5" y="208" width="365" height="528"/>
+                                <rect key="frame" x="5" y="140" width="365" height="485"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbV-PK-Nb2">
-                                <rect key="frame" x="5" y="93" width="365" height="110"/>
+                                <rect key="frame" x="5" y="25" width="365" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a location for:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCr-hs-Yaw">
                                         <rect key="frame" x="8" y="57" width="349" height="21"/>
@@ -116,7 +32,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cities placed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PS-hx-d58">
-                                        <rect key="frame" x="133.33333333333334" y="5" width="99" height="21"/>
+                                        <rect key="frame" x="133" y="5" width="99" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -156,7 +72,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma8-re-XOF">
-                                <rect key="frame" x="286" y="741" width="84" height="32"/>
+                                <rect key="frame" x="286" y="630" width="84" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="r4T-Gt-R5l"/>
                                     <constraint firstAttribute="height" constant="32" id="rIK-Iy-B62"/>
@@ -182,7 +98,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAa-Ig-WUE">
-                                <rect key="frame" x="123.33333333333331" y="741" width="130" height="32"/>
+                                <rect key="frame" x="123" y="630" width="130" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="eMK-XP-PGs"/>
                                     <constraint firstAttribute="height" constant="32" id="w0z-gC-NL9"/>
@@ -241,7 +157,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mapGame-1" width="180" height="180"/>
-        <image name="markerMap" width="10" height="10"/>
+        <image name="markerMap" width="16" height="16"/>
     </resources>
 </document>

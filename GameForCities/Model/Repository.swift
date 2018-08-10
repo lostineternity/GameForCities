@@ -20,9 +20,13 @@ class Repository {
         jsonDataQuestions = try? Data(contentsOf: URL(fileURLWithPath: pathToFileWithQuestions!), options: Data.ReadingOptions.dataReadingMapped)
     }
     
-    func parseJsonData() -> Questions {
+    func parseJsonData() -> [Question] {
         let decoder = JSONDecoder()
-        let questions = try! decoder.decode(Questions.self, from: jsonDataQuestions)
+        let questionsDict = try! decoder.decode([String:[Question]].self, from: jsonDataQuestions)
+        var questions: [Question] = []
+        for (_, value) in questionsDict {
+            questions.append(contentsOf: value as [Question])
+        }
         return questions
     }
     

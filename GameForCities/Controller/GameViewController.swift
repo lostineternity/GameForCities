@@ -30,7 +30,13 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         game.delegate = self
+        mapView.delegate = self
         
+        firstVCloadSetup()
+        update()
+    }
+    
+    func firstVCloadSetup() {
         mapView.layer.borderWidth = 0.5
         mapView.layer.borderColor = UIColor.black.cgColor
         
@@ -47,36 +53,36 @@ class GameViewController: UIViewController {
         catch {
             print("One or more of the map styles failed to load. \(error)")
         }
-        mapView.delegate = self
+        
         mapView.settings.setAllGesturesEnabled(true)
         mapView.settings.compassButton = true
         
         capitalCity.text = game.currentQuestion?.capitalCity
-        
-        update()
     }
     
     func update() {
+        nextQuestionButtonUpdate()
         citiesPlaced.text = "Cities placed: \(game.citiesPlaced)"
         kilometersLeft.text = "Kilometers left: \(game.distanceLeft)"
         cityToPlace.text = game.currentQuestion?.capitalCity
-        if game.answerReceived {
-            placeMarkerButton.alpha = 0
-            nextGameButton.alpha = 1
+    }
+    
+    func nextQuestionButtonUpdate() {
+        if game.isQuestionsListEnd || game.isGameOver {
+            nextGameButton.setTitle("Start new game", for: .normal)
+        } else {
+            nextGameButton.setTitle("Next question", for: .normal)
         }
-        else {
-            placeMarkerButton.alpha = 1
-            nextGameButton.alpha = 0
-        }
-        
     }
     
     func didFinishGame() {
+        nextQuestionButtonUpdate()
+        currentCursorCoordinate = nil
         if game.isQuestionsListEnd || game.isGameOver {
             let title = "Game over"
             let message = "Lets check your result"
-            let okAction = UIAlertAction(title: "Ok", style: .default){ _ in
-                self.resultAlert()
+            let okAction = UIAlertAction(title: "Ok", style: .default){ [weak self] _ in
+                self?.resultAlert()
             }
             let gameOverAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
             gameOverAlert.addAction(okAction)
@@ -113,12 +119,63 @@ class GameViewController: UIViewController {
     }
     
     @IBAction private func nextQuestionButtonPress(_ sender: Any) {
-        game.NextQuestion()
-        guard (game.isQuestionsListEnd || game.isGameOver) else {
+        if game.isQuestionsListEnd || game.isGameOver {
+            game.startNewGame()
             mapView.clear()
             update()
-            return
+        } else {
+            guard let _ = currentCursorCoordinate, game.answerReceived else { return }
+            game.NextQuestion()
+            mapView.clear()
+            update()
         }
     }
+}
+
+// MARK: Map tuning
+extension GameViewController {
     
+    func placeMarker(title: String, color: UIColor, position: CLLocationCoordinate2D) {
+        let marker = GMSMarker()
+        marker.icon     = GMSMarker.markerImage(with: color)
+        marker.position = position
+        marker.title    = title
+        marker.snippet  = "lat: \(String(format: "%.3f", position.latitude)) \n long: \(String(format: "%.3f", position.longitude))"
+        marker.map = mapView
+    }
+    
+    func rightAnswerCircle(radius: Double, position: CLLocationCoordinate2D) {
+        let circleCenter = CLLocationCoordinate2D(latitude: position.latitude, longitude: position.longitude)
+        let circle = GMSCircle(position: circleCenter, radius: radius)
+        circle.fillColor = UIColor(red: 255, green: 0, blue: 0, alpha: 0.2)
+        circle.strokeWidth = 1
+        circle.strokeColor = UIColor.red
+        circle.map = mapView
+    }
+    
+    func placeLine(answerPosition: CLLocationCoordinate2D, rightPosition: CLLocationCoordinate2D){
+        let path = GMSMutablePath()
+        path.add(CLLocationCoordinate2D(latitude: answerPosition.latitude, longitude: answerPosition.longitude))
+        path.add(CLLocationCoordinate2D(latitude: rightPosition.latitude, longitude: rightPosition.longitude))
+        let polyline = GMSPolyline(path: path)
+        polyline.map = mapView
+    }
+    
+}
+
+// MARK: GMSMapViewDelegate
+extension GameViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        currentCameraPosition = position
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        currentCursorCoordinate = coordinate
+        if let selectedPosition = currentCursorCoordinate {
+            mapView.clear()
+            placeMarker(title: "Your answer", color: .red, position: selectedPosition)
+            update()
+        }
+    }
 }

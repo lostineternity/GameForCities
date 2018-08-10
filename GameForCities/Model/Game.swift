@@ -12,15 +12,15 @@ class Game {
     
     static let shared = Game()
     
-    var delegate: GameViewController?
+    weak var delegate: GameViewController?
     
     var repositorium = Repository.shared
     var distanceLeft = defaultGameDistance
     
-    var questions: Questions?
+    var questions: [Question]?
     var currentQuestion: Question? {
         guard !isQuestionsListEnd, let array = questions else { return nil }
-        return array.capitalCities[numberOfQuestion]
+        return array[numberOfQuestion]
     }
     var currentQuestionPosition: CLLocationCoordinate2D? {
         guard let question = currentQuestion else { return nil }
@@ -53,7 +53,7 @@ class Game {
     func NextQuestion() {
         guard !(isGameOver || isQuestionsListEnd), let array = questions else { return }
         numberOfQuestion += 1
-        if array.capitalCities.endIndex <= numberOfQuestion {
+        if array.endIndex <= numberOfQuestion {
             isQuestionsListEnd = true
         }
         answerReceived = false
@@ -81,6 +81,7 @@ class Game {
     
     func startNewGame() {
         Game.shared.dispose()
+        delegate?.firstVCloadSetup()
         fetchQuestionsFromRepository()
     }
     

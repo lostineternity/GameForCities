@@ -22,12 +22,21 @@ class Repository {
     
     func parseJsonData() -> [Question] {
         let decoder = JSONDecoder()
-        let questionsDict = try! decoder.decode([String:[Question]].self, from: jsonDataQuestions)
+        let jsonDataDict = try! decoder.decode([String:[JSONdata]].self, from: jsonDataQuestions)
+        var jsonData: [JSONdata] = []
+        for (_, value) in jsonDataDict {
+            jsonData.append(contentsOf: value)
+        }
+        return convertJsonDataToWorkModel(jsonData)
+    }
+    
+    func convertJsonDataToWorkModel(_ jsonData: [JSONdata]) -> [Question] {
         var questions: [Question] = []
-        for (_, value) in questionsDict {
-            questions.append(contentsOf: value as [Question])
+        for jsonQuestion in jsonData {
+            if let latitude = Double(jsonQuestion.lat), let longitude = Double(jsonQuestion.long) {
+                questions.append(Question(capitalCity: jsonQuestion.capitalCity, latitude: latitude, longitude: longitude))
+            }
         }
         return questions
     }
-    
 }

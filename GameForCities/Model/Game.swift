@@ -24,7 +24,7 @@ class Game {
     }
     var currentQuestionPosition: CLLocationCoordinate2D? {
         guard let question = currentQuestion else { return nil }
-        return CLLocationCoordinate2D(latitude: Double(question.lat)!, longitude: Double(question.long)!)
+        return CLLocationCoordinate2D(latitude: question.latitude, longitude: question.longitude)
     }
     
     var answerReceived = false

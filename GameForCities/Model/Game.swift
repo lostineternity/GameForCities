@@ -50,7 +50,7 @@ class Game {
         questions = repositorium.parseJsonData()
     }
     
-    func NextQuestion() {
+    func nextQuestion() {
         guard !(isGameOver || isQuestionsListEnd), let array = questions else { return }
         numberOfQuestion += 1
         if array.endIndex <= numberOfQuestion {

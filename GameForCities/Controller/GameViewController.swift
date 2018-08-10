@@ -29,14 +29,15 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        game.delegate = self
-        mapView.delegate = self
-        
         firstVCloadSetup()
         update()
     }
     
     func firstVCloadSetup() {
+        
+        game.delegate = self
+        mapView.delegate = self
+        
         mapView.layer.borderWidth = 0.5
         mapView.layer.borderColor = UIColor.black.cgColor
         
@@ -125,7 +126,7 @@ class GameViewController: UIViewController {
             update()
         } else {
             guard let _ = currentCursorCoordinate, game.answerReceived else { return }
-            game.NextQuestion()
+            game.nextQuestion()
             mapView.clear()
             update()
         }
